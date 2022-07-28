@@ -81,8 +81,6 @@ def main():
     results = split_and_request(jsons)
     summary = {}
     for a, i, j, r in zip(areas, instances, jsons, results):
-        if a == 'cn-huhehaote':
-            print(a, i, j, r)
         if i not in summary or summary[i][1] > r:
             summary[i] = [a, r]
     format_s = '%%-%ds  %%-%ds  %%-%ds  %%-10.5f' % (
